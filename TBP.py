@@ -221,7 +221,7 @@ def load_data(path):
     return data
 
 try:
-    data = load_data(r"C:\Users\finan\OneDrive\Dokumen\Syafina\SMT 6\Pengantar Python\data.csv")
+    data = load_data(r"data.csv")
 except FileNotFoundError:
     st.error("Error: 'data python.csv' not found. Please ensure the data file is in the correct directory or path is correct.")
     st.stop()
