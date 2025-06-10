@@ -219,12 +219,7 @@ def load_data(path):
     labels = ['<20K', '20K-40K', '40K-60K', '60K-100K', '>100K']
     data['Price Category'] = pd.cut(data['Price ($)'], bins=bins, labels=labels, right=False, ordered=True)
     return data
-
-try:
     data = load_data(r"data.csv")
-except FileNotFoundError:
-    st.error("Error: 'data python.csv' not found. Please ensure the data file is in the correct directory or path is correct.")
-    st.stop()
 
 # --- PREDICTION MODEL SETUP ---
 # List of features for prediction
